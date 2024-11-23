@@ -1,0 +1,123 @@
+:root {
+    /* user-setiing */
+    /* color */
+    --clr-slate-900:hsl(218, 44%, 22%);
+    --clr-slate-500:hsl(216, 15%, 48%);
+    --clr-slate-300:hsl(212, 45%, 89%);
+
+    --clr-white:hsl(0,0%, 100%);
+
+    /* font-family: Outfit */
+    --ff-Outfft:"Outfit", sans-serif;
+
+    /* font-size : 22px, 15px */
+    --fs-700:1.375rem;
+    --fs-400:0.9375rem;
+
+    /* font-weight: 700, 400*/
+    --fw-bold:700;
+    --fw-regular:400;
+
+    --spacing-500:2.5rem;
+    --spacing-300:1.5rem;
+    --spacing-200:1rem;
+}
+
+/* set box-sizing */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* reset margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+body{
+    margin: 0;
+}
+
+/* set line-height for font title */
+h1,
+h2,
+h3,
+h4,
+h5{
+    line-height: 1.2;
+}
+
+/* Make form elements to work with */
+img,
+picture {
+    display: block;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+
+body {
+    font-family: var(--ff-Outfft);
+    /* set line-height for font body  */
+    line-height: 1.4;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-slate-300);
+}
+
+.container {
+    margin-inline: auto; 
+    margin-block: 1rem;
+    width: min(100% -2rem, 1140px);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* card */
+.card {
+    width: 320px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    padding-inline: var(--spacing-200);
+    padding-block: var(--spacing-200) var(--spacing-500);
+    background-color: var(--clr-white);
+}
+
+.card .card__img{
+    border-radius: 10px;
+}
+
+.card .card__descriptions {
+    margin-block-start: var(--spacing-300);
+    padding-inline: var(--spacing-200);
+}
+
+.card .card__descriptions > * + * {
+    margin-block-start: var(--spacing-200);
+}
+
+/* card__title */
+.card .card__title {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-slate-900);
+}
+
+/* card__body */
+.card .card__body{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    color: var(--clr-slate-500);
+    letter-spacing: 0.2px;
+}
